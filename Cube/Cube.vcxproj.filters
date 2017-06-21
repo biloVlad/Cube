@@ -26,4 +26,7 @@
   <ItemGroup>
     <EmbeddedResource Include="Main.resx" />
   </ItemGroup>
+  <ItemGroup>
+    <Media Include="Data\Sounds\hoverLogo.wav" />
+  </ItemGroup>
 </Project>
