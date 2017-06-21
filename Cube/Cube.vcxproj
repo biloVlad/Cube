@@ -150,6 +150,9 @@
   <ItemGroup>
     <Media Include="Data\Sounds\hoverLogo.wav" />
   </ItemGroup>
+  <ItemGroup>
+    <Image Include="logo_f2l.Image.jpg" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

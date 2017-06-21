@@ -61,16 +61,16 @@ namespace Cube {
 			// 
 			// logo_f2l
 			// 
+			this->logo_f2l->BackColor = System::Drawing::Color::White;
 			this->logo_f2l->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"logo_f2l.Image")));
 			this->logo_f2l->Location = System::Drawing::Point(12, 78);
 			this->logo_f2l->Name = L"logo_f2l";
 			this->logo_f2l->Size = System::Drawing::Size(315, 239);
 			this->logo_f2l->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->logo_f2l->TabIndex = 0;
-			this->logo_f2l->TabStop = false;			
-			this->logo_f2l->MouseHover += gcnew System::EventHandler(this, &Main::logo_f2l_MouseHover);
+			this->logo_f2l->TabStop = false;
 			this->logo_f2l->MouseLeave += gcnew System::EventHandler(this, &Main::logo_f2l_MouseLeave);
-
+			this->logo_f2l->MouseHover += gcnew System::EventHandler(this, &Main::logo_f2l_MouseHover);
 			// 
 			// label1
 			// 
@@ -87,6 +87,7 @@ namespace Cube {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->BackColor = System::Drawing::Color::White;
 			this->ClientSize = System::Drawing::Size(632, 441);
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->logo_f2l);

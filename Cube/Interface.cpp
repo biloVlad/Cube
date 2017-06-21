@@ -9,8 +9,6 @@ System::Void Cube::Main::logo_f2l_MouseHover(System::Object ^ sender, System::Ev
 	System::Media::SoundPlayer  ^f = gcnew System::Media::SoundPlayer();
 	f->Stream = safe_cast<System::IO::Stream^>(resources->GetObject(L"hoverLogo.Sound"));
 	f->Play();
-
-
 }
 
 System::Void Cube::Main::logo_f2l_MouseLeave(System::Object ^ sender, System::EventArgs ^ e) {
