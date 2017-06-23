@@ -1,5 +1,5 @@
 #pragma once
-
+#include "DownsidePlank.h"
 namespace Cube {
 
 	using namespace System;
@@ -68,6 +68,7 @@ namespace Cube {
 			this->downsidePlank_pcBox->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->downsidePlank_pcBox->TabIndex = 0;
 			this->downsidePlank_pcBox->TabStop = false;
+			this->downsidePlank_pcBox->Click += gcnew System::EventHandler(this, &F2L::downsidePlank_pcBox_Click);
 			this->downsidePlank_pcBox->MouseLeave += gcnew System::EventHandler(this, &F2L::downsidePlank_pcBox_MouseLeave);
 			this->downsidePlank_pcBox->MouseHover += gcnew System::EventHandler(this, &F2L::downsidePlank_pcBox_MouseHover);
 			// 
@@ -108,5 +109,13 @@ namespace Cube {
 	private: System::Void downsidePlank_pcBox_MouseHover(System::Object^  sender, System::EventArgs^  e);
 			 
 	private: System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(F2L::typeid));
+			 
+	private: DownsidePlank ^downsidePlank;
+	private: System::Void downsidePlank_pcBox_Click(System::Object^  sender, System::EventArgs^  e) {
+		if (downsidePlank == nullptr) {
+			downsidePlank = gcnew DownsidePlank();
+			downsidePlank->Show();
+		}
+	}
 	};
 }

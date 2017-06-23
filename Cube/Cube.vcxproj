@@ -152,6 +152,9 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="DownsidePlank.resx">
+      <DependentUpon>DownsidePlank.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="F2L.resx">
       <DependentUpon>F2L.h</DependentUpon>
     </EmbeddedResource>
