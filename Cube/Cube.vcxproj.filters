@@ -14,7 +14,16 @@
     <ClCompile Include="Main.cpp">
       <Filter>Файлы исходного кода</Filter>
     </ClCompile>
-    <ClCompile Include="Interface.cpp">
+    <ClCompile Include="F2L.cpp">
+      <Filter>Файлы исходного кода</Filter>
+    </ClCompile>
+    <ClCompile Include="InterfaceF2L.cpp">
+      <Filter>Файлы исходного кода</Filter>
+    </ClCompile>
+    <ClCompile Include="InterfaceMain.cpp">
+      <Filter>Файлы исходного кода</Filter>
+    </ClCompile>
+    <ClCompile Include="DownsidePlank.cpp">
       <Filter>Файлы исходного кода</Filter>
     </ClCompile>
   </ItemGroup>
@@ -22,14 +31,23 @@
     <ClInclude Include="Main.h">
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
+    <ClInclude Include="F2L.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="DownsidePlank.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Main.resx" />
+    <EmbeddedResource Include="F2L.resx" />
   </ItemGroup>
   <ItemGroup>
     <Media Include="Data\Sounds\hoverLogo.wav" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="Data\Images\logo_f2l.Image.jpg" />
+    <Image Include="Data\Images\downsidePlank.png" />
+    <Image Include="Data\Images\s1_1.png" />
   </ItemGroup>
 </Project>

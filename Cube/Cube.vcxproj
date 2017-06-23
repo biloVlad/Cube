@@ -134,15 +134,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Interface.cpp" />
+    <ClCompile Include="DownsidePlank.cpp" />
+    <ClCompile Include="F2L.cpp" />
+    <ClCompile Include="InterfaceMain.cpp" />
+    <ClCompile Include="InterfaceF2L.cpp" />
     <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="DownsidePlank.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="F2L.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="Main.h">
       <FileType>CppForm</FileType>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="F2L.resx">
+      <DependentUpon>F2L.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.h</DependentUpon>
     </EmbeddedResource>
@@ -151,7 +163,9 @@
     <Media Include="Data\Sounds\hoverLogo.wav" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="Data\Images\downsidePlank.png" />
     <Image Include="Data\Images\logo_f2l.Image.jpg" />
+    <Image Include="Data\Images\s1_1.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
