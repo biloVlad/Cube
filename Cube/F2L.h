@@ -38,6 +38,7 @@ namespace Cube {
 	protected:
 	private: System::Windows::Forms::Label^  downsidePlank_lbl;
 	private: System::Media::SoundPlayer  ^f;
+	private: System::Windows::Forms::PictureBox^  pictureBox1;
 
 	private:
 		/// <summary>
@@ -56,7 +57,9 @@ namespace Cube {
 			this->downsidePlank_pcBox = (gcnew System::Windows::Forms::PictureBox());
 			this->f = (gcnew System::Media::SoundPlayer());
 			this->downsidePlank_lbl = (gcnew System::Windows::Forms::Label());
+			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->downsidePlank_pcBox))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// downsidePlank_pcBox
@@ -75,7 +78,7 @@ namespace Cube {
 			// f
 			// 
 			this->f->LoadTimeout = 10000;
-			this->f->SoundLocation = L"";
+			this->f->SoundLocation = L"Data\\Sounds\\hoverLogo.wav";
 			this->f->Stream = nullptr;
 			this->f->Tag = nullptr;
 			// 
@@ -90,16 +93,33 @@ namespace Cube {
 			this->downsidePlank_lbl->TabIndex = 1;
 			this->downsidePlank_lbl->Text = L"Downside Plank";
 			// 
+			// pictureBox1
+			// 
+			this->pictureBox1->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
+			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
+			this->pictureBox1->Location = System::Drawing::Point(485, 12);
+			this->pictureBox1->Name = L"pictureBox1";
+			this->pictureBox1->Size = System::Drawing::Size(31, 31);
+			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+			this->pictureBox1->TabIndex = 3;
+			this->pictureBox1->TabStop = false;
+			this->pictureBox1->Click += gcnew System::EventHandler(this, &F2L::pictureBox1_Click);
+			// 
 			// F2L
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(528, 392);
+			this->Controls->Add(this->pictureBox1);
 			this->Controls->Add(this->downsidePlank_lbl);
 			this->Controls->Add(this->downsidePlank_pcBox);
+			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
 			this->Name = L"F2L";
 			this->Text = L"F2L";
+			this->Activated += gcnew System::EventHandler(this, &F2L::OnActivated);
+			this->Load += gcnew System::EventHandler(this, &F2L::OnLoad);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->downsidePlank_pcBox))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -107,15 +127,15 @@ namespace Cube {
 #pragma endregion
 	private: System::Void downsidePlank_pcBox_MouseLeave(System::Object^  sender, System::EventArgs^  e);
 	private: System::Void downsidePlank_pcBox_MouseHover(System::Object^  sender, System::EventArgs^  e);
-			 
+	
 	private: System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(F2L::typeid));
 			 
 	private: DownsidePlank ^downsidePlank;
-	private: System::Void downsidePlank_pcBox_Click(System::Object^  sender, System::EventArgs^  e) {
-		if (downsidePlank == nullptr) {
-			downsidePlank = gcnew DownsidePlank();
-			downsidePlank->Show();
-		}
+	private: System::Void downsidePlank_pcBox_Click(System::Object^  sender, System::EventArgs^  e);
+	private: System::Void OnLoad(System::Object^  sender, System::EventArgs^  e);
+	private: System::Void OnActivated(System::Object^  sender, System::EventArgs^  e);
+	private: System::Void pictureBox1_Click(System::Object^  sender, System::EventArgs^  e) {
+		this->Close();
 	}
-	};
+};
 }

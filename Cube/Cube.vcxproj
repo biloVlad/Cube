@@ -136,6 +136,7 @@
   <ItemGroup>
     <ClCompile Include="DownsidePlank.cpp" />
     <ClCompile Include="F2L.cpp" />
+    <ClCompile Include="Interface.cpp" />
     <ClCompile Include="InterfaceMain.cpp" />
     <ClCompile Include="InterfaceF2L.cpp" />
     <ClCompile Include="Main.cpp" />
@@ -147,6 +148,7 @@
     <ClInclude Include="F2L.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="Header.h" />
     <ClInclude Include="Main.h">
       <FileType>CppForm</FileType>
     </ClInclude>

@@ -1,5 +1,4 @@
 #pragma once
-
 namespace Cube {
 
 	using namespace System;
@@ -44,6 +43,17 @@ namespace Cube {
 	private: System::Windows::Forms::Label^  label4;
 	private: System::Windows::Forms::PictureBox^  pictureBox4;
 	private: System::Windows::Forms::Label^  label5;
+	private: System::Windows::Forms::Panel^  downsidePlank_pnl_2;
+	private: System::Windows::Forms::Button^  changePage_btn;
+	private: System::Windows::Forms::Label^  label9;
+	private: System::Windows::Forms::PictureBox^  pictureBox7;
+	private: System::Windows::Forms::Label^  label8;
+	private: System::Windows::Forms::PictureBox^  pictureBox6;
+	private: System::Windows::Forms::Label^  label7;
+	private: System::Windows::Forms::PictureBox^  pictureBox5;
+	private: System::Windows::Forms::Label^  label6;
+	private: System::Windows::Forms::Label^  label10;
+	private: System::Windows::Forms::PictureBox^  pictureBox8;
 
 	private:
 		/// <summary>
@@ -68,10 +78,26 @@ namespace Cube {
 			this->label4 = (gcnew System::Windows::Forms::Label());
 			this->pictureBox4 = (gcnew System::Windows::Forms::PictureBox());
 			this->label5 = (gcnew System::Windows::Forms::Label());
+			this->downsidePlank_pnl_2 = (gcnew System::Windows::Forms::Panel());
+			this->label10 = (gcnew System::Windows::Forms::Label());
+			this->pictureBox8 = (gcnew System::Windows::Forms::PictureBox());
+			this->label9 = (gcnew System::Windows::Forms::Label());
+			this->pictureBox7 = (gcnew System::Windows::Forms::PictureBox());
+			this->label8 = (gcnew System::Windows::Forms::Label());
+			this->pictureBox6 = (gcnew System::Windows::Forms::PictureBox());
+			this->label7 = (gcnew System::Windows::Forms::Label());
+			this->pictureBox5 = (gcnew System::Windows::Forms::PictureBox());
+			this->label6 = (gcnew System::Windows::Forms::Label());
+			this->changePage_btn = (gcnew System::Windows::Forms::Button());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox4))->BeginInit();
+			this->downsidePlank_pnl_2->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox8))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox7))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox6))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox5))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// label1
@@ -162,12 +188,129 @@ namespace Cube {
 			this->label5->TabIndex = 8;
 			this->label5->Text = L"4. (~0.65)\r\nR U\' R\' U\' R U\' R\' U R U\' R\'\r\n";
 			// 
+			// downsidePlank_pnl_2
+			// 
+			this->downsidePlank_pnl_2->Controls->Add(this->label10);
+			this->downsidePlank_pnl_2->Controls->Add(this->pictureBox8);
+			this->downsidePlank_pnl_2->Controls->Add(this->label9);
+			this->downsidePlank_pnl_2->Controls->Add(this->pictureBox7);
+			this->downsidePlank_pnl_2->Controls->Add(this->label8);
+			this->downsidePlank_pnl_2->Controls->Add(this->pictureBox6);
+			this->downsidePlank_pnl_2->Controls->Add(this->label7);
+			this->downsidePlank_pnl_2->Controls->Add(this->pictureBox5);
+			this->downsidePlank_pnl_2->Controls->Add(this->label6);
+			this->downsidePlank_pnl_2->Location = System::Drawing::Point(0, 0);
+			this->downsidePlank_pnl_2->Name = L"downsidePlank_pnl_2";
+			this->downsidePlank_pnl_2->Size = System::Drawing::Size(695, 341);
+			this->downsidePlank_pnl_2->TabIndex = 9;
+			this->downsidePlank_pnl_2->Visible = false;
+			// 
+			// label10
+			// 
+			this->label10->AutoSize = true;
+			this->label10->Location = System::Drawing::Point(487, 241);
+			this->label10->Name = L"label10";
+			this->label10->Size = System::Drawing::Size(208, 85);
+			this->label10->TabIndex = 8;
+			this->label10->Text = L"8. (~0.95)\r\nM\' U R U\' Rw\' R U2 R\' U R U\' R\'\r\nF R\' F\' R2 U2 R\' U R U R\'\r\nF\' L\' U L"
+				L" F R U R\'\r\nU2 + 6\r\n";
+			// 
+			// pictureBox8
+			// 
+			this->pictureBox8->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox8.Image")));
+			this->pictureBox8->Location = System::Drawing::Point(387, 241);
+			this->pictureBox8->Name = L"pictureBox8";
+			this->pictureBox8->Size = System::Drawing::Size(100, 100);
+			this->pictureBox8->SizeMode = System::Windows::Forms::PictureBoxSizeMode::AutoSize;
+			this->pictureBox8->TabIndex = 7;
+			this->pictureBox8->TabStop = false;
+			// 
+			// label9
+			// 
+			this->label9->AutoSize = true;
+			this->label9->Location = System::Drawing::Point(140, 241);
+			this->label9->Name = L"label9";
+			this->label9->Size = System::Drawing::Size(191, 51);
+			this->label9->TabIndex = 6;
+			this->label9->Text = L"7. (~0.85)\r\nRw U\' Rw\' U Rw U Rw\' F\' U\' F\r\nU + 6\r\n";
+			this->label9->Click += gcnew System::EventHandler(this, &DownsidePlank::label9_Click);
+			// 
+			// pictureBox7
+			// 
+			this->pictureBox7->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox7.Image")));
+			this->pictureBox7->Location = System::Drawing::Point(34, 241);
+			this->pictureBox7->Name = L"pictureBox7";
+			this->pictureBox7->Size = System::Drawing::Size(100, 100);
+			this->pictureBox7->SizeMode = System::Windows::Forms::PictureBoxSizeMode::AutoSize;
+			this->pictureBox7->TabIndex = 5;
+			this->pictureBox7->TabStop = false;
+			// 
+			// label8
+			// 
+			this->label8->AutoSize = true;
+			this->label8->Location = System::Drawing::Point(489, 78);
+			this->label8->Name = L"label8";
+			this->label8->Size = System::Drawing::Size(143, 34);
+			this->label8->TabIndex = 4;
+			this->label8->Text = L"6. (~0.75)\r\nR U R2 F R F\' R U\' R\'\r\n";
+			// 
+			// pictureBox6
+			// 
+			this->pictureBox6->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox6.Image")));
+			this->pictureBox6->Location = System::Drawing::Point(387, 78);
+			this->pictureBox6->Name = L"pictureBox6";
+			this->pictureBox6->Size = System::Drawing::Size(100, 100);
+			this->pictureBox6->SizeMode = System::Windows::Forms::PictureBoxSizeMode::AutoSize;
+			this->pictureBox6->TabIndex = 3;
+			this->pictureBox6->TabStop = false;
+			// 
+			// label7
+			// 
+			this->label7->AutoSize = true;
+			this->label7->Location = System::Drawing::Point(136, 78);
+			this->label7->Name = L"label7";
+			this->label7->Size = System::Drawing::Size(191, 34);
+			this->label7->TabIndex = 2;
+			this->label7->Text = L"5. (~0.80)\r\nR U\' R\' U Rw U\' R\' U R U Rw\'\r\n";
+			// 
+			// pictureBox5
+			// 
+			this->pictureBox5->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox5.Image")));
+			this->pictureBox5->Location = System::Drawing::Point(34, 78);
+			this->pictureBox5->Name = L"pictureBox5";
+			this->pictureBox5->Size = System::Drawing::Size(100, 100);
+			this->pictureBox5->SizeMode = System::Windows::Forms::PictureBoxSizeMode::AutoSize;
+			this->pictureBox5->TabIndex = 1;
+			this->pictureBox5->TabStop = false;
+			// 
+			// label6
+			// 
+			this->label6->AutoSize = true;
+			this->label6->Font = (gcnew System::Drawing::Font(L"Segoe Print", 13.8F));
+			this->label6->Location = System::Drawing::Point(158, 9);
+			this->label6->Name = L"label6";
+			this->label6->Size = System::Drawing::Size(309, 42);
+			this->label6->TabIndex = 0;
+			this->label6->Text = L"Downside plank 2 (FR) ";
+			// 
+			// changePage_btn
+			// 
+			this->changePage_btn->Location = System::Drawing::Point(587, 347);
+			this->changePage_btn->Name = L"changePage_btn";
+			this->changePage_btn->Size = System::Drawing::Size(91, 23);
+			this->changePage_btn->TabIndex = 10;
+			this->changePage_btn->Text = L"Далее ->";
+			this->changePage_btn->UseVisualStyleBackColor = true;
+			this->changePage_btn->Click += gcnew System::EventHandler(this, &DownsidePlank::changePage_btn_Click);
+			// 
 			// DownsidePlank
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::White;
-			this->ClientSize = System::Drawing::Size(690, 472);
+			this->ClientSize = System::Drawing::Size(695, 378);
+			this->Controls->Add(this->downsidePlank_pnl_2);
+			this->Controls->Add(this->changePage_btn);
 			this->Controls->Add(this->label5);
 			this->Controls->Add(this->pictureBox4);
 			this->Controls->Add(this->label4);
@@ -183,10 +326,28 @@ namespace Cube {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox4))->EndInit();
+			this->downsidePlank_pnl_2->ResumeLayout(false);
+			this->downsidePlank_pnl_2->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox8))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox7))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox6))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox5))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
 		}
 #pragma endregion
-	};
+	private: System::Void changePage_btn_Click(System::Object^  sender, System::EventArgs^  e) {
+		if (this->downsidePlank_pnl_2->Visible) {
+			this->downsidePlank_pnl_2->Visible = false;
+			this->changePage_btn->Text = L"Далее ->";
+		}
+		else {
+			this->downsidePlank_pnl_2->Visible = true;
+			this->changePage_btn->Text = L"<- Назад";
+		}
+	}
+private: System::Void label9_Click(System::Object^  sender, System::EventArgs^  e) {
+}
+};
 }

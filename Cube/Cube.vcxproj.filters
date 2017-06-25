@@ -26,6 +26,9 @@
     <ClCompile Include="DownsidePlank.cpp">
       <Filter>Файлы исходного кода</Filter>
     </ClCompile>
+    <ClCompile Include="Interface.cpp">
+      <Filter>Файлы исходного кода</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Main.h">
@@ -37,10 +40,14 @@
     <ClInclude Include="DownsidePlank.h">
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
+    <ClInclude Include="Header.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Main.resx" />
     <EmbeddedResource Include="F2L.resx" />
+    <EmbeddedResource Include="DownsidePlank.resx" />
   </ItemGroup>
   <ItemGroup>
     <Media Include="Data\Sounds\hoverLogo.wav" />
