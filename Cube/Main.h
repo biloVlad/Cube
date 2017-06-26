@@ -92,14 +92,15 @@ namespace Cube {
 			// f
 			// 
 			this->f->LoadTimeout = 1;
-			this->f->SoundLocation = L"";
+			this->f->SoundLocation = L"Data\\Sounds\\hoverLogo.wav";
 			this->f->Stream = nullptr;
 			this->f->Tag = nullptr;
 			// 
 			// pictureBox1
 			// 
+			this->pictureBox1->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
-			this->pictureBox1->Location = System::Drawing::Point(589, 12);
+			this->pictureBox1->Location = System::Drawing::Point(692, 12);
 			this->pictureBox1->Name = L"pictureBox1";
 			this->pictureBox1->Size = System::Drawing::Size(31, 31);
 			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -112,7 +113,7 @@ namespace Cube {
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::White;
-			this->ClientSize = System::Drawing::Size(632, 441);
+			this->ClientSize = System::Drawing::Size(735, 378);
 			this->Controls->Add(this->pictureBox1);
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->logo_f2l);

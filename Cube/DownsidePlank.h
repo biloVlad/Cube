@@ -54,6 +54,10 @@ namespace Cube {
 	private: System::Windows::Forms::Label^  label6;
 	private: System::Windows::Forms::Label^  label10;
 	private: System::Windows::Forms::PictureBox^  pictureBox8;
+	private: System::Windows::Forms::PictureBox^  pictureBox9;
+	private: System::Windows::Forms::PictureBox^  pictureBox10;
+
+
 
 	private:
 		/// <summary>
@@ -79,6 +83,7 @@ namespace Cube {
 			this->pictureBox4 = (gcnew System::Windows::Forms::PictureBox());
 			this->label5 = (gcnew System::Windows::Forms::Label());
 			this->downsidePlank_pnl_2 = (gcnew System::Windows::Forms::Panel());
+			this->pictureBox9 = (gcnew System::Windows::Forms::PictureBox());
 			this->label10 = (gcnew System::Windows::Forms::Label());
 			this->pictureBox8 = (gcnew System::Windows::Forms::PictureBox());
 			this->label9 = (gcnew System::Windows::Forms::Label());
@@ -89,15 +94,18 @@ namespace Cube {
 			this->pictureBox5 = (gcnew System::Windows::Forms::PictureBox());
 			this->label6 = (gcnew System::Windows::Forms::Label());
 			this->changePage_btn = (gcnew System::Windows::Forms::Button());
+			this->pictureBox10 = (gcnew System::Windows::Forms::PictureBox());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox4))->BeginInit();
 			this->downsidePlank_pnl_2->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox9))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox8))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox7))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox6))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox5))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox10))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// label1
@@ -190,6 +198,7 @@ namespace Cube {
 			// 
 			// downsidePlank_pnl_2
 			// 
+			this->downsidePlank_pnl_2->Controls->Add(this->pictureBox9);
 			this->downsidePlank_pnl_2->Controls->Add(this->label10);
 			this->downsidePlank_pnl_2->Controls->Add(this->pictureBox8);
 			this->downsidePlank_pnl_2->Controls->Add(this->label9);
@@ -201,14 +210,27 @@ namespace Cube {
 			this->downsidePlank_pnl_2->Controls->Add(this->label6);
 			this->downsidePlank_pnl_2->Location = System::Drawing::Point(0, 0);
 			this->downsidePlank_pnl_2->Name = L"downsidePlank_pnl_2";
-			this->downsidePlank_pnl_2->Size = System::Drawing::Size(695, 341);
+			this->downsidePlank_pnl_2->Size = System::Drawing::Size(735, 346);
 			this->downsidePlank_pnl_2->TabIndex = 9;
 			this->downsidePlank_pnl_2->Visible = false;
+			this->downsidePlank_pnl_2->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &DownsidePlank::downsidePlank_pnl_2_Paint);
+			// 
+			// pictureBox9
+			// 
+			this->pictureBox9->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
+			this->pictureBox9->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox9.Image")));
+			this->pictureBox9->Location = System::Drawing::Point(692, 12);
+			this->pictureBox9->Name = L"pictureBox9";
+			this->pictureBox9->Size = System::Drawing::Size(31, 31);
+			this->pictureBox9->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+			this->pictureBox9->TabIndex = 9;
+			this->pictureBox9->TabStop = false;
+			this->pictureBox9->Click += gcnew System::EventHandler(this, &DownsidePlank::pictureBox9_Click);
 			// 
 			// label10
 			// 
 			this->label10->AutoSize = true;
-			this->label10->Location = System::Drawing::Point(487, 241);
+			this->label10->Location = System::Drawing::Point(493, 241);
 			this->label10->Name = L"label10";
 			this->label10->Size = System::Drawing::Size(208, 85);
 			this->label10->TabIndex = 8;
@@ -248,7 +270,7 @@ namespace Cube {
 			// label8
 			// 
 			this->label8->AutoSize = true;
-			this->label8->Location = System::Drawing::Point(489, 78);
+			this->label8->Location = System::Drawing::Point(493, 78);
 			this->label8->Name = L"label8";
 			this->label8->Size = System::Drawing::Size(143, 34);
 			this->label8->TabIndex = 4;
@@ -267,7 +289,7 @@ namespace Cube {
 			// label7
 			// 
 			this->label7->AutoSize = true;
-			this->label7->Location = System::Drawing::Point(136, 78);
+			this->label7->Location = System::Drawing::Point(140, 78);
 			this->label7->Name = L"label7";
 			this->label7->Size = System::Drawing::Size(191, 34);
 			this->label7->TabIndex = 2;
@@ -303,13 +325,26 @@ namespace Cube {
 			this->changePage_btn->UseVisualStyleBackColor = true;
 			this->changePage_btn->Click += gcnew System::EventHandler(this, &DownsidePlank::changePage_btn_Click);
 			// 
+			// pictureBox10
+			// 
+			this->pictureBox10->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
+			this->pictureBox10->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox10.Image")));
+			this->pictureBox10->Location = System::Drawing::Point(692, 12);
+			this->pictureBox10->Name = L"pictureBox10";
+			this->pictureBox10->Size = System::Drawing::Size(31, 31);
+			this->pictureBox10->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+			this->pictureBox10->TabIndex = 11;
+			this->pictureBox10->TabStop = false;
+			this->pictureBox10->Click += gcnew System::EventHandler(this, &DownsidePlank::pictureBox10_Click);
+			// 
 			// DownsidePlank
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::White;
-			this->ClientSize = System::Drawing::Size(695, 378);
+			this->ClientSize = System::Drawing::Size(735, 378);
 			this->Controls->Add(this->downsidePlank_pnl_2);
+			this->Controls->Add(this->pictureBox10);
 			this->Controls->Add(this->changePage_btn);
 			this->Controls->Add(this->label5);
 			this->Controls->Add(this->pictureBox4);
@@ -320,7 +355,9 @@ namespace Cube {
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->pictureBox1);
 			this->Controls->Add(this->label1);
+			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
 			this->Name = L"DownsidePlank";
+			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"DownsidePlank";
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->EndInit();
@@ -328,10 +365,12 @@ namespace Cube {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox4))->EndInit();
 			this->downsidePlank_pnl_2->ResumeLayout(false);
 			this->downsidePlank_pnl_2->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox9))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox8))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox7))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox6))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox5))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox10))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -348,6 +387,14 @@ namespace Cube {
 		}
 	}
 private: System::Void label9_Click(System::Object^  sender, System::EventArgs^  e) {
+}
+private: System::Void pictureBox9_Click(System::Object^  sender, System::EventArgs^  e) {
+	this->Close();
+}
+private: System::Void downsidePlank_pnl_2_Paint(System::Object^  sender, System::Windows::Forms::PaintEventArgs^  e) {
+}
+private: System::Void pictureBox10_Click(System::Object^  sender, System::EventArgs^  e) {
+	this->Close();
 }
 };
 }

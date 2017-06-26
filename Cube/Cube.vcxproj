@@ -136,7 +136,6 @@
   <ItemGroup>
     <ClCompile Include="DownsidePlank.cpp" />
     <ClCompile Include="F2L.cpp" />
-    <ClCompile Include="Interface.cpp" />
     <ClCompile Include="InterfaceMain.cpp" />
     <ClCompile Include="InterfaceF2L.cpp" />
     <ClCompile Include="Main.cpp" />

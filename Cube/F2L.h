@@ -65,7 +65,7 @@ namespace Cube {
 			// downsidePlank_pcBox
 			// 
 			this->downsidePlank_pcBox->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"downsidePlank_pcBox.Image")));
-			this->downsidePlank_pcBox->Location = System::Drawing::Point(53, 51);
+			this->downsidePlank_pcBox->Location = System::Drawing::Point(53, 61);
 			this->downsidePlank_pcBox->Name = L"downsidePlank_pcBox";
 			this->downsidePlank_pcBox->Size = System::Drawing::Size(100, 100);
 			this->downsidePlank_pcBox->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -77,7 +77,7 @@ namespace Cube {
 			// 
 			// f
 			// 
-			this->f->LoadTimeout = 10000;
+			this->f->LoadTimeout = 1;
 			this->f->SoundLocation = L"Data\\Sounds\\hoverLogo.wav";
 			this->f->Stream = nullptr;
 			this->f->Tag = nullptr;
@@ -97,7 +97,7 @@ namespace Cube {
 			// 
 			this->pictureBox1->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
-			this->pictureBox1->Location = System::Drawing::Point(485, 12);
+			this->pictureBox1->Location = System::Drawing::Point(692, 12);
 			this->pictureBox1->Name = L"pictureBox1";
 			this->pictureBox1->Size = System::Drawing::Size(31, 31);
 			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -109,12 +109,13 @@ namespace Cube {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(528, 392);
+			this->ClientSize = System::Drawing::Size(735, 378);
 			this->Controls->Add(this->pictureBox1);
 			this->Controls->Add(this->downsidePlank_lbl);
 			this->Controls->Add(this->downsidePlank_pcBox);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
 			this->Name = L"F2L";
+			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"F2L";
 			this->Activated += gcnew System::EventHandler(this, &F2L::OnActivated);
 			this->Load += gcnew System::EventHandler(this, &F2L::OnLoad);
